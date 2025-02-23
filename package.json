@@ -11,6 +11,7 @@
     "hono": "^4.7.2"
   },
   "devDependencies": {
+    "@quramy/jest-prisma-core": "^1.8.1",
     "@types/node": "^20.11.17",
     "prisma": "^6.4.1",
     "tsx": "^4.7.1",

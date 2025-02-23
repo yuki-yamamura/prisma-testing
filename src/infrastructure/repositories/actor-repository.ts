@@ -6,4 +6,8 @@ export class ActorRepository {
   async save(args: Prisma.ActorCreateArgs) {
     return this.prismaClient.actor.create(args);
   }
+
+  async findMany(args?: Prisma.ActorFindManyArgs) {
+    return this.prismaClient.actor.findMany(args);
+  }
 }

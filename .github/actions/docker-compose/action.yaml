@@ -11,4 +11,4 @@ runs:
       run: sudo chmod +x /usr/local/bin/docker-compose
     - name: Start services
       shell: bash
-      run: docker compose -f compose.test.yaml up -d
+      run: docker compose up -d

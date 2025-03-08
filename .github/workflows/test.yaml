@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 env:
   ENV_FILE: .env.test
+  DATABASE_PORT: 5433
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -11,9 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/build
       - uses: ./.github/actions/docker-compose
-      - name: Wait for PostgreSQL
+      - name: Wait for PostgreSQL to start
         run: sleep 5
-      - name: Apply Prisma schema
-        run: npm run db:push:test
       - name: Run tests
         run: npm run test

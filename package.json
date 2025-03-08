@@ -3,8 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "test": "dotenv -e .env.test -- vitest",
-    "db:push:test": "dotenv -e .env.test -- prisma db push"
+    "test": "dotenv -e .env.test -- vitest"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",

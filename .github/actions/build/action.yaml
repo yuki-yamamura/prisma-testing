@@ -1,5 +1,5 @@
 name: "Build"
-description: "Sets up the repository"
+
 runs:
   using: "composite"
   steps:
@@ -10,5 +10,5 @@ runs:
         cache: "npm"
         cache-dependency-path: "package-lock.json"
     - name: Install dependencies
-      shell: bash
       run: npm install
+      shell: bash
